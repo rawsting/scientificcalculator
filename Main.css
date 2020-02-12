@@ -1,0 +1,402 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.center-ctnr {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.h-line {
+  width: 100%;
+  height: 5%;
+  z-index: 1;
+  background: red;
+}
+
+/* ------------------ End Global Classes -----------------*/
+
+#navbar {
+  display: flex;
+  height: 30vh;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 5vw;
+  top: 0;
+}
+
+#nav-icon {
+  position: sticky;
+  color: grey;
+  transition: 0.5s;
+}
+
+#nav-icon:hover {
+  cursor: pointer;
+}
+
+.nav-icon-on {
+  background: black;
+  color: white;
+  transform: rotate(90deg);
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  transition: 0.5s;
+}
+
+.nav-icon-off {
+  background: none;
+  color: grey;
+  transform: rotate(0deg);
+  transition: 0.5s;
+}
+
+#nav-sub {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background: black;
+  height: 100%;
+  width: 100%;
+  padding: 15px 5px 5px 5px;
+  display: none;
+}
+
+#nav-sub a {
+  color: white;
+  text-decoration: none;
+}
+
+#nav-sub a:hover {
+  color: #17a2b8;
+}
+
+/* make appear */
+#nav-icon:hover ~ #nav-sub {
+  display: flex;
+  animation: navSlideDown 2s linear;
+}
+
+#nav-sub:hover {
+  display: flex;
+}
+
+/* End Nav */
+
+#heading-section {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-image: url('https://wallpaperplay.com/walls/full/5/9/a/164622.jpg');
+  background-size: cover;
+  /* background: Lightblue; */
+  position: relative;
+  color: white;
+}
+
+#heading-section h1 {
+  font-size: 7rem;
+  color: white;
+  animation: headerSlide 3s 1;
+}
+
+#heading-section h2, #heading-section p {
+  color: white;
+}
+
+#heading-section a {
+  text-decoration: none;
+  color: white;
+}
+
+#welcome-section {
+  height: 100vh;
+  width: 100vw;
+  padding: 1vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 10% 2fr 10%;
+  column-gap: 2vw;
+  grid-template-areas: "timg abMe abMe"
+                       ". iDo ."
+                       "html css later"
+                       ". toProj .";
+  color: white;
+  background: #2c3e50; 
+}
+
+#prsnl-timg-ctnr {
+  grid-area: timg;
+  padding: 1%;
+}
+
+#about-me {
+  grid-area: abMe;
+  padding: 1%;
+}
+
+#whatIDo {
+  grid-area: iDo;
+}
+
+#htmlCard {
+  grid-area: html;
+}
+
+#cssCard {
+  grid-area: css;
+}
+
+#laterCard {
+  grid-area: later;
+}
+
+#toProj {
+  grid-area: toProj;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#toProj p {
+  display: inline;
+}
+
+#toProj a {
+  display: flex;
+  width: 40%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  text-decoration: none;
+}
+
+#toProj a:hover {
+  /* Try to make button that fills border */
+}
+
+#projects {
+  width: 100vw;
+  min-height: 100vh;
+  display: inline-flex;
+  text-align: center;
+  flex-direction: column;
+  background: #0b72bd;
+}
+
+#proj-sec-title {
+  display: inline;
+  padding: 1rem;
+  text-align: center;
+  background: linear-gradient(#2c3e50, #0b72bd);
+  color: white;
+  margin: 0px; /* why was there a margin before added this? */
+}
+
+#proj-g-ctnr {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-tile {
+  display:inline-block;
+  width: 30%;
+  margin: 0.5%;
+  text-align: center;
+  border: 3px solid #34495e;
+  background: white;
+}
+
+#full-proj {
+  display: inline-block;
+  height: 5vh;
+  text-align: center;
+  align-self: center;
+  background: white;
+  color: black;
+  border: none;
+  padding: 5px;
+  border-radius: 16px;
+  transition: 0.5s;
+}
+
+#full-proj i {
+  animation: leftToRight 1.5s linear infinite paused;
+  transtion: 0.3s;
+}
+
+#full-proj:hover {
+  color: white;
+  background: #3399ff;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#full-proj:hover i {
+  color: white;
+  margin-left: 5px;
+  animation-play-state: running;
+  transition: 0.3s;
+}
+
+
+
+/*
+#full-proj::before {
+  background: white;
+  width: 0%;
+  height: 5%;
+  position: absolute;
+  left:0px;
+  content: "";
+}
+
+#full-proj:hover::before {
+  width: 10%;
+  content:"View All My Projects"
+}
+
+*/
+
+#to-contact {
+  color: white;
+  text-decoration: none;
+}
+
+#contact {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: #c0392b;
+  color: white;
+}
+
+#contact-title {
+  /* background: linear-gradient(#0b72bd, #c0392b)*/
+}
+
+#contact-icons {
+  width: 60vw;
+  height: 40vh;
+  display: flex;
+  flex-direction: row;
+  /*
+  grid-template-columns: repeat(4, 15vw);
+  grid-template-rows: 50% 50%;
+  grid-template-areas: "fcc cdpn github email";
+  */
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid white;
+}
+
+#contact-icons a {
+  color: white;
+  transition: 0.3s;
+}
+
+#contact-icons a:hover {
+  color: #00ccff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+#fcc-icon {
+  grid-area: fcc;
+}
+
+#cdpn-icon {
+  grid-area: cdpn;
+}
+
+#github-icon {
+  grid-area: github;
+}
+
+#email-icon {
+  grid-area: email;
+}
+
+#response-form {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+}
+
+#fullName {
+  width: 33%;
+}
+
+#email {
+  width: 50%;
+}
+
+#tel {
+  width: 25%;
+}
+
+#comment-area {
+  resize: none;
+  wrap: hard;
+  height: 10vh;
+  /*
+  cols: 40;
+  rows: 5;
+  */
+}
+
+
+
+/* figure out how to slide in from top */
+@keyframes headerSlide {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes upAndDown {
+  0% {transform: translateY(0%);}
+  25% {transform: translateY(-10%);}
+  50% {transform: translateY(0%);}
+  75% {transform: translateY(10%);}
+  100% {transform: translateY(0%);}
+}
+
+@keyframes leftToRight {
+  0% {transform: translateX(0px);}
+  50% {transform: translateX(5px);}
+  100% {transform: translateX(0px);}
+}
+
+/* Slide Down
+@keyframes navSlideDown{
+  from {height: 0%;};
+  to {height: 20vh;};
+}
+*/
