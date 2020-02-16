@@ -29,9 +29,10 @@ $("#nav-icon").hover(function() {
 })
 
 
-/* figure out how to make this work */
+/* figure out how to make this work 
 $("#nav-icon").hover(function() {
   $(this).addClass("nav-icon-on")
 }, function() {
   $(this).addClass("nav-icon-off")
 })
+*/
