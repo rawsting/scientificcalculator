@@ -182,7 +182,7 @@ img {
 }
 
 #card-ctnr .card{
-  wisth: 25%;
+  width: 25%;
 }
 
 #toProj {
@@ -206,7 +206,7 @@ img {
   text-decoration: none;
 }
 
-#toProj a:hover {
+#toProj > a:hover {
   /* Try to make button that fills border */
 }
 
@@ -260,7 +260,7 @@ img {
 
 #full-proj i {
   animation: leftToRight 1.5s linear infinite paused;
-  transtion: 0.3s;
+  transition: 0.3s;
 }
 
 #full-proj:hover {
@@ -381,9 +381,6 @@ img {
 
 #comment-area {
   resize: none;
-  wrap: hard;
-  cols: 40;
-  rows: 6;
 }
 
 #send-btn {
