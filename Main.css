@@ -5,7 +5,7 @@
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 
 img {
@@ -131,22 +131,23 @@ img {
 #welcome-section {
   height: 100vh;
   width: 100vw;
-  padding: 1vw;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 10% 2fr 10%;
   column-gap: 2vw;
   grid-template-areas: "timg abMe abMe"
-                       ". iDo ."
-                       "html css later"
+                       "iDo iDo iDo"
+                       "card card card"
                        ". toProj .";
+  /* could make cards all in one container to fit them in middle w/ padding */
   color: white;
   background: #2c3e50; 
 }
 
 #prsnl-timg-ctnr {
   grid-area: timg;
-  padding: 1%;
+  padding: 3%;
+  text-align: right;
 }
 
 #about-me {
@@ -156,18 +157,32 @@ img {
 
 #whatIDo {
   grid-area: iDo;
+  text-align: center;
+  border-top: 2px solid white;
 }
 
+
 #htmlCard {
-  grid-area: html;
+  width: 25%;
 }
 
 #cssCard {
-  grid-area: css;
+  width: 25%;
 }
 
 #laterCard {
-  grid-area: later;
+  width: 25%;
+}
+
+#card-ctnr {
+  grid-area: card;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#card-ctnr .card{
+  wisth: 25%;
 }
 
 #toProj {
@@ -288,7 +303,7 @@ img {
 
 #contact {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -303,7 +318,7 @@ img {
 
 #contact-icons {
   width: 60vw;
-  height: 40vh;
+  height: 20vh;
   display: flex;
   flex-direction: row;
   /*
@@ -314,7 +329,7 @@ img {
   text-align: center;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid white;
+  /* border: 1px solid white; */
 }
 
 #contact-icons a {
@@ -328,7 +343,8 @@ img {
   transition: 0.3s;
 }
 
-#fcc-icon {
+/* Change this to "fcc-icon" when transferring to GH, only for challenge */
+#profile-link {
   grid-area: fcc;
 }
 
@@ -348,6 +364,7 @@ img {
   display: flex;
   flex-direction: column;
   width: 30vw;
+  margin: 2%;
 }
 
 #fullName {
@@ -359,20 +376,20 @@ img {
 }
 
 #tel {
-  width: 25%;
+  width: 12em;
 }
 
 #comment-area {
   resize: none;
   wrap: hard;
-  height: 10vh;
-  /*
   cols: 40;
-  rows: 5;
-  */
+  rows: 6;
 }
 
-
+#send-btn {
+  width: 50%;
+  height: 10%;
+}
 
 /* figure out how to slide in from top */
 @keyframes headerSlide {
@@ -400,3 +417,16 @@ img {
   to {height: 20vh;};
 }
 */
+
+/* Media Queries */
+
+/* iPhone 6-8 */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+  
+    #htmlCard, #cssCard, #laterCard {
+      width: 100vw;
+    }
+}
