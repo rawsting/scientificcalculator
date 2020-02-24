@@ -5,7 +5,7 @@
 }
 
 body {
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 img {
@@ -106,11 +106,16 @@ img {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  background-image: url('https://wallpaperplay.com/walls/full/5/9/a/164622.jpg');
+  background-image: url("https://wallpaperplay.com/walls/full/5/9/a/164622.jpg");
   background-size: cover;
   /* background: Lightblue; */
   position: relative;
   color: white;
+}
+
+#heading-section object {
+  width: 25vw;
+  height: 25vh;
 }
 
 #heading-section h1 {
@@ -119,7 +124,8 @@ img {
   animation: headerSlide 3s 1;
 }
 
-#heading-section h2, #heading-section p {
+#heading-section h2,
+#heading-section p {
   color: white;
 }
 
@@ -129,19 +135,20 @@ img {
 }
 
 #welcome-section {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 10% 2fr 10%;
   column-gap: 2vw;
-  grid-template-areas: "timg abMe abMe"
-                       "iDo iDo iDo"
-                       "card card card"
-                       ". toProj .";
+  grid-template-areas:
+    "timg abMe abMe"
+    "iDo iDo iDo"
+    "card card card"
+    ". toProj .";
   /* could make cards all in one container to fit them in middle w/ padding */
   color: white;
-  background: #2c3e50; 
+  background: #2c3e50;
 }
 
 #prsnl-timg-ctnr {
@@ -160,7 +167,6 @@ img {
   text-align: center;
   border-top: 2px solid white;
 }
-
 
 #htmlCard {
   width: 25%;
@@ -181,7 +187,7 @@ img {
   justify-content: space-around;
 }
 
-#card-ctnr .card{
+#card-ctnr .card {
   width: 25%;
 }
 
@@ -237,9 +243,9 @@ img {
 }
 
 .project-tile {
-  display:inline-block;
+  display: inline-block;
   width: 30%;
-  margin: 0.5%;
+  margin: 1%;
   text-align: center;
   border: 3px solid #34495e;
   background: white;
@@ -276,8 +282,6 @@ img {
   animation-play-state: running;
   transition: 0.3s;
 }
-
-
 
 /*
 #full-proj::before {
@@ -390,22 +394,42 @@ img {
 
 /* figure out how to slide in from top */
 @keyframes headerSlide {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes upAndDown {
-  0% {transform: translateY(0%);}
-  25% {transform: translateY(-10%);}
-  50% {transform: translateY(0%);}
-  75% {transform: translateY(10%);}
-  100% {transform: translateY(0%);}
+  0% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(-10%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  75% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
 
 @keyframes leftToRight {
-  0% {transform: translateX(0px);}
-  50% {transform: translateX(5px);}
-  100% {transform: translateX(0px);}
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 /* Slide Down
@@ -418,12 +442,55 @@ img {
 /* Media Queries */
 
 /* iPhone 6-8 */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
-  
-    #htmlCard, #cssCard, #laterCard {
-      width: 100vw;
-    }
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  #heading-section {
+    justify-content: flex-start;
+  }
+  #heading-section object {
+    width: 60vw;
+    height: 40vh;
+  }
+  #heading-section h1 {
+    font-size:3rem;
+  }
+  #heading-section a { /* Make arrow posotion higher up in page, also center */
+    bottom: 50%;
+    border: 1px solid red;
+  }
+ 
+  /* welcome section move boxes closer to "What I Do" */
+  #card-ctnr {
+    flex-wrap: wrap;
+  }
+  #card-ctnr .card {
+    width: 90vw;
+    height: 50vh;
+    margin: 10px 0px 10px 0px;
+  }
+  #toProj {
+    width: 40vw;
+  }
+  #toProj a {
+    display: flex;
+    width: 100%;
+  }
+  /* Projects */
+  .project-tile {
+    width: 80%;
+  }
+  /* Contact */
+  #contact-icons {
+    width: 100vw;
+  }
+  #response-form {
+    width: 80vw;
+    margin-bottom: 15vh;
+  }
+  #email {
+    width:60%;
+  }
+  #tel {
+    width: 35%;
+  }
 }
+ 
