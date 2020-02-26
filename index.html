@@ -14,7 +14,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="Main.js"></script>
-    <!-- In use on CodePen -- For copy and paste only --><script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <!-- In use on CodePen -- For copy and paste only -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
     <nav id="navbar">
       <i class="fas fa-chevron-circle-right fa-3x" id="nav-icon"></i>
@@ -34,7 +35,7 @@
     <header id="heading-section">
 
       <div style="text-align: center;">
-        <object data="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/Logo2.svg"  type="image/svg+xml"></object>
+        <object data="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/Logo2.svg" type="image/svg+xml"></object>
         <h1> Hi, I'm Jacob Bruce </h1>
         <br>
         <h2> A Front-End web devleoper </h2>
@@ -51,13 +52,11 @@
 
       <div class="center-ctnr" id="prsnl-timg-ctnr">
         <img class="img-fluid img-thumbnail" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/PFPHoco.jpg"
-          id="personal-thumbnail" onmouseover="pfpHover()" onmouseout="pfpUnHover()"/>
+          id="personal-thumbnail" onmouseover="pfpHover()" onmouseout="pfpUnHover()" />
       </div>
 
       <article id="about-me">
-        Compellingly syndicate impactful innovation via revolutionary vortals. Energistically envisioneer stand-alone
-        materials before cross-platform partnerships. Energistically communicate interoperable niches after
-        goal-oriented innovation. Dynamically leverage existing intuitive.
+        My name is Jacob Bruce and I'm from Rome, Georgia. I'm currently enrolled at Rome High School and graduate in May 2021. I hope to become a Front End web developer and learn some Back End as well, and hopefully become a Full Stack developer eventually. I enjoy building websites from the ground up and creating beautiful webpages. I've always wanted to create an online platform or large-scale website. Outside of programming I enjoy playing soccer <i class="fas fa-futbol"></i> and currently play club soccer at SSA North Georgia and for my high school Varsity team. After graduating high school I'd like to get a entry-level job and hopefully go to college and earn a degree in Web Design.
       </article>
 
       <div id="whatIDo" class="center-ctnr">
@@ -179,7 +178,7 @@
 
       </div>
 
-      <form id="response-form" action="" method="post">
+      <form id="response-form" action="" method="POST">
         <h1> Have A question? </h1>
         <p> Let me know </p>
         <hr style="background:white">
@@ -198,5 +197,10 @@
     </section>
 
   </body>
+
+  <?php
+    $name = htmlspecialchars($_POST["fullName"]);
+    echo $name;
+  ?>
 
   </html>
