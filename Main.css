@@ -36,7 +36,7 @@ img {
   position: fixed;
   z-index: 1;
   left: 5vw;
-  top: 0;
+  top: 0px;
 }
 
 #nav-icon {
@@ -151,6 +151,7 @@ img {
   background: #2c3e50;
 }
 
+
 #prsnl-timg-ctnr {
   grid-area: timg;
   padding: 3%;
@@ -168,27 +169,22 @@ img {
   border-top: 2px solid white;
 }
 
-#htmlCard {
-  width: 25%;
-}
-
-#cssCard {
-  width: 25%;
-}
-
-#laterCard {
-  width: 25%;
-}
-
 #card-ctnr {
   grid-area: card;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  font-size: 20px;
 }
 
 #card-ctnr .card {
-  width: 25%;
+  width: 30%;
+}
+
+#card-ctnr i {
+  width: 40%;
+  height: 30%;
+  float: left;
 }
 
 #toProj {
@@ -385,6 +381,7 @@ img {
 
 #comment-area {
   resize: none;
+  height: 20vh;
 }
 
 #send-btn {
@@ -441,7 +438,7 @@ img {
 
 /* Media Queries */
 
-/* iPhone 6-8 */
+/* Mobile */
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   #heading-section {
     justify-content: flex-start;
