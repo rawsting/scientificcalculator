@@ -44,9 +44,43 @@
 
     <section id="welcome-section">
 
+      
+    <nav id="navbar">
+      <i class="fas fa-chevron-circle-right fa-3x" id="nav-icon"></i>
+      <div id="nav-sub">
+        <a href="#welcome-section">
+          <i class="fas fa-user fa-2x"></i>
+        </a>
+        <a href="#projects">
+          <i class="fas fa-clipboard-list fa-2x"></i>
+        </a>
+        <a href="#contact">
+          <i class="fas fa-address-card fa-2x"></i>
+        </a>
+      </div>
+    </nav>
+
+    <header id="heading-section">
+
+      <div style="text-align: center;">
+        <object data="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/Logo2.svg" type="image/svg+xml"></object>
+        <h1> Hi, I'm Jacob Bruce </h1>
+        <br>
+        <h2> A Front-End web devleoper </h2>
+      </div>
+
+      <a href="#welcome-section">
+        <i class="fas fa-angle-double-down fa-3x"
+          style="position: absolute; bottom: 5%;animation: upAndDown 2s linear 1s infinite;"></i>
+      </a>
+
+    </header>
+
+    <section id="welcome-section">
+
       <div class="center-ctnr" id="prsnl-timg-ctnr">
         <img class="img-fluid img-thumbnail" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/PFPHoco.jpg"
-          id="personal-thumbnail" onmouseover="pfpHover()" onmouseout="pfpUnHover()"/>
+          id="personal-thumbnail" onmouseover="pfpHover()" onmouseout="pfpUnHover()" />
       </div>
 
       <article id="about-me">
@@ -63,21 +97,43 @@
           <div class="card-title bg-dark text-light text-center">
             <h1> HTML5 </h1>
           </div>
-          <div class="card-body text-dark"> I know HTML5 </div>
+          <div class="card-body text-dark"> 
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/html5-logo.svg" style="width:40%;height:40%;float:left;"/>
+            <p> 
+            
+              I have been learning and practicing HTML since late 2015. I started out on a snow day from school because I wanted to make my own Minecraft website. It started out very rough, like getting font-size mixed up with text-size, but ever since then I have been ethused in making webpages using HTML. I am very versed in making static pages and am beginning to dive into making dynamic web pages. Later this year in 2020 I will be getting certified by Microsoft with their MTA HTML5 test.
+              
+            </p>
+          </div>
         </div>
 
         <div class="card" id="cssCard">
           <div class="card-title bg-dark text-light text-center">
             <h1> CSS3 </h1>
           </div>
-          <div class="card-body text-dark"> I know CSS3 </div>
+          <div class="card-body text-dark"> 
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/css3-logo.svg" style="width:40%;height:40%;float:left;"/>
+            <p>
+            
+              I have been learning CSS since I started learning HTML to style it. I started out using inline CSS and gradually moved to the style tag and then to seperate stylesheets. I have grown my knowledge in CSS greatly, from forgetting how to change the font-size to an almost full understanding of Grid and Flexbox. As mentioned, I know how to use Grid and Flexbox to create beautiful layouts, as well as how to style elements and make the entire page look amazingly beautiful. I am also delving into preprocessors like SASS.
+            
+            </p>
+          </div>
         </div>
 
         <div class="card" id="laterCard">
           <div class="card-title bg-dark text-light text-center">
-            <h1> Later </h1>
+            <h1> JavaScript </h1>
           </div>
-          <div class="card-body text-dark"> I will do this one later </div>
+          <div class="card-body text-dark"> 
+            <!-- <i class="fab fa-js-square fa-8x" style="color:yellow"></i> -->
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/js5-logo.svg" style="width: 40%;height:40%; float:left;" />
+            <p> 
+              
+              I have always been interested in JavaScript and have begun learning it recently. I enjoy making my pages interactive and manipulation data. I have begun learning JS5 and have delved into libraries such as JQuery which make learning and programming JS easier and quicker. I am also interested in backend libraries for JS, Node.JS specifically. I plan to become highly versed in JavaScript and learn Node.JS to delve into the backend of web development.
+              
+            </p>
+          </div>
         </div>
 
       </div>
@@ -138,6 +194,7 @@
 
       </div>
 
+        <br/>
       <form action="https://codepen.io/Jacob-Bruce/pens/public" method="get" target="_blank">
         <button id="full-proj" type="submit">
           View All My Projects
@@ -165,14 +222,14 @@
           <i class="fab fa-github fa-3x"></i>
           <h6> GitHub </h6>
         </a>
-        <a id="email-icon">
+        <a id="email-icon" href="mailto:jacobbrucedev@gmail.com?Subject=">
           <i class="fas fa-envelope fa-3x"></i>
           <h6> Email </h6>
         </a>
 
       </div>
 
-      <form id="response-form" action="" method="post">
+      <form id="response-form" action="" method="POST">
         <h1> Have A question? </h1>
         <p> Let me know </p>
         <hr style="background:white">
@@ -190,12 +247,11 @@
 
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script src="Main.js"></script>
-    <!-- In use on CodePen -- For copy and paste only --><script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-
   </body>
+
+  <?php
+    $name = htmlspecialchars($_POST["fullName"]);
+    echo $name;
+  ?>
 
   </html>
