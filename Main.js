@@ -48,3 +48,4 @@ function pfpUnHover() {
   $("#personal-thumbnail").attr("src", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/PFPHoco.jpg")
 };
 
+$("#about-me").css("color", "red");
