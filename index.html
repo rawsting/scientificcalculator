@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<hmtl>
-
+<hmtl lang="en">
   <head>
-    <link rel="stylesheet" type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title> Jacob Bruce </title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="Main.css">
-  </head>
+    <link rel="icon" type="image/png" href="/nc_assets/img/icon/Logo-Fav-16.png">
+    <link rel="icon" type="image/png" href="/nc_assets/img/icon/Logo-Fav-32.png">
 
+  </head>
   <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    
-
     <nav id="navbar">
       <i class="fas fa-chevron-circle-right fa-3x" id="nav-icon"></i>
       <div id="nav-sub">
@@ -29,141 +29,110 @@
         </a>
       </div>
     </nav>
-
     <header id="heading-section">
-
       <div style="text-align: center;">
         <object data="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/Logo2.svg" type="image/svg+xml"></object>
         <h1> Hi, I'm Jacob Bruce </h1>
         <br>
-        <h2> A Front-End web devleoper </h2>
+        <h2> A Front-End Web Developer </h2>
       </div>
-
       <a href="#welcome-section">
-        <i class="fas fa-angle-double-down fa-3x"
-          style="position: absolute; bottom: 5%;animation: upAndDown 2s linear 1s infinite;"></i>
+        <i class="fas fa-angle-double-down fa-3x" style="animation: upAndDown 2s linear 1s infinite;"></i>
       </a>
-
     </header>
-
     <section id="welcome-section">
-
       <div class="center-ctnr" id="prsnl-timg-ctnr">
-        <img class="img-fluid img-thumbnail" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/PFPHoco.jpg"
-          id="personal-thumbnail" onmouseover="pfpHover()" onmouseout="pfpUnHover()" />
+        <img class="img-fluid img-thumbnail" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/PFPHoco.jpg" alt="Profile Picture" id="personal-thumbnail" onmouseover="pfpHover()" onmouseout="pfpUnHover()" />
       </div>
-
       <article id="about-me">
         My name is Jacob Bruce and I'm from Rome, Georgia. I'm currently enrolled at Rome High School and graduate in May 2021. I hope to become a Front End web developer and learn some Back End as well, and hopefully become a Full Stack developer eventually. I enjoy building websites from the ground up and creating beautiful webpages. I've always wanted to create an online platform or large-scale website. Outside of programming I enjoy playing soccer <i class="fas fa-futbol"></i> and currently play club soccer at SSA North Georgia and for my high school Varsity team. After graduating high school I'd like to get a entry-level job and hopefully go to college and earn a degree in Web Design.
       </article>
-
       <div id="whatIDo" class="center-ctnr">
         <h1> What I do </h1>
       </div>
-
       <div id="card-ctnr">
-
         <div class="card" id="htmlCard">
           <div class="card-title bg-dark text-light text-center">
             <h1> HTML5 </h1>
           </div>
           <div class="card-body text-dark"> 
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/html5-logo.svg" style="width:40%;height:40%;float:left;"/>
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/html5-logo.svg" style="width:40%;height:40%;float:left;" alt="HTML5"/>
             <p> 
-            
               I have been learning and practicing HTML since late 2015. I started out on a snow day from school because I wanted to make my own Minecraft website. It started out very rough, like getting font-size mixed up with text-size, but ever since then I have been ethused in making webpages using HTML. I am very versed in making static pages and am beginning to dive into making dynamic web pages. Later this year in 2020 I will be getting certified by Microsoft with their MTA HTML5 test.
-              
             </p>
           </div>
         </div>
-
         <div class="card" id="cssCard">
           <div class="card-title bg-dark text-light text-center">
             <h1> CSS3 </h1>
           </div>
           <div class="card-body text-dark"> 
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/css3-logo.svg" style="width:40%;height:40%;float:left;"/>
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/css3-logo.svg" style="width:40%;height:40%;float:left;" alt="CSS3"/>
             <p>
-            
               I have been learning CSS since I started learning HTML to style it. I started out using inline CSS and gradually moved to the style tag and then to seperate stylesheets. I have grown my knowledge in CSS greatly, from forgetting how to change the font-size to an almost full understanding of Grid and Flexbox. As mentioned, I know how to use Grid and Flexbox to create beautiful layouts, as well as how to style elements and make the entire page look amazingly beautiful. I am also delving into preprocessors like SASS.
-            
             </p>
           </div>
         </div>
-
         <div class="card" id="laterCard">
           <div class="card-title bg-dark text-light text-center">
             <h1> JavaScript </h1>
           </div>
           <div class="card-body text-dark"> 
             <!-- <i class="fab fa-js-square fa-8x" style="color:yellow"></i> -->
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/js5-logo.svg" style="width: 40%;height:40%; float:left;" />
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/js5-logo.svg" style="width: 40%;height:40%; float:left;" alt="JS5"/>
             <p> 
-              
               I have always been interested in JavaScript and have begun learning it recently. I enjoy making my pages interactive and manipulation data. I have begun learning JS5 and have delved into libraries such as JQuery which make learning and programming JS easier and quicker. I am also interested in backend libraries for JS, Node.JS specifically. I plan to become highly versed in JavaScript and learn Node.JS to delve into the backend of web development.
-              
             </p>
           </div>
         </div>
-
       </div>
-
       <div id="toProj">
         <a href="#projects">
           <h5> View My Projects </h5>
           <i class="fas fa-project-diagram"></i>
         </a>
       </div>
-
     </section>
-
     <section id="projects">
-
       <h1 id="proj-sec-title"> My Projects </h1>
-
       <div id="proj-g-ctnr">
-
         <div class="project-tile card">
-          <img class="card-img-top" src="https://i.imgur.com/QdYZKJm.png" />
+          <img class="card-img-top" src="https://i.imgur.com/QdYZKJm.png" alt="Product Landing Page on CodePen" />
           <div class="card-body">
             <a class="card-link" href="https://codepen.io/Jacob-Bruce/pen/povvYro" target="_blank"> Product Landing Page </a>
           </div>
         </div>
         <div class="project-tile card">
-          <img class="card-img-top" src="https://i.imgur.com/Fvy6zBQ.png" />
+          <img class="card-img-top" src="https://i.imgur.com/Fvy6zBQ.png" alt="Technical Documentation Page on CodePen" />
           <div class="card-body">
             <a class="card-link" href="https://codepen.io/Jacob-Bruce/pen/BEEwgm" target="_blank"> Technical Documentation Page </a>
           </div>
         </div>
         <div class="project-tile card">
-          <img class="card-img-top" src="https://i.imgur.com/29gOL0o.png" />
+          <img class="card-img-top" src="https://i.imgur.com/29gOL0o.png" alt="Information Form on CodePen" />
           <div class="card-body">
             <a class="card-link" href="https://codepen.io/Jacob-Bruce/pen/NmbdGJ" target="_blank"> Information Form </a>
           </div>
         </div>
-
         <div class="project-tile card">
-          <img class="card-img-top" src="https://i.imgur.com/FCxvgwI.png" />
+          <img class="card-img-top" src="https://i.imgur.com/FCxvgwI.png" alt="Glossary Page on CodePen"/>
           <div class="card-body">
             <a class="card-link" href="https://codepen.io/Jacob-Bruce/pen/WNNEVLK" target="_blank"> Glossary Page </a>
           </div>
         </div>
         <div class="project-tile card">
-          <img class="card-img-top" src="https://i.imgur.com/51404js.png" />
+          <img class="card-img-top" src="https://i.imgur.com/51404js.png" alt="Tribute Page 1 of 2 on CodePen" />
           <div class="card-body">
             <a class="card-link" href="https://codepen.io/Jacob-Bruce/pen/yrzWEe" target="_blank"> Tribute Page (1 of 2) </a>
           </div>
         </div>
-
         <div class="project-tile card">
-          <img class="card-img-top" src="https://i.imgur.com/tkwtBOj.png" />
+          <img class="card-img-top" src="https://i.imgur.com/tkwtBOj.png" alt="Tribute Page 2 of 2 on CodePen"/>
           <div class="card-body">
             <a class="card-link" href="https://codepen.io/Jacob-Bruce/pen/ddwwdB" target="_blank"> Tribute Page (2 of 2) </a>
           </div>
         </div>
-
       </div>
-
         <br/>
       <form action="https://codepen.io/Jacob-Bruce/pens/public" method="get" target="_blank">
         <button id="full-proj" type="submit">
@@ -171,17 +140,12 @@
           <i class="fas fa-chevron-right"></i>
         </button>
       </form>
-
       <span style="height:2vh"></span>
-      
       <a href="#contact" id="to-contact"> <h5 style="display:inline;"> Contact Me </h5> <i class="fas fa-address-book"></i> </a>
-
     </section>
-
     <section id="contact">
       <h1 id="contact-title"> Get in Contact </h1>
       <div id="contact-icons">
-
         <a id="profile-link" href="https://www.freecodecamp.org/jacob_bruce" target="_blank">
           <i class="fab fa-free-code-camp fa-3x"></i>
           <h6> FreeCodeCamp </h6>
@@ -198,34 +162,23 @@
           <i class="fas fa-envelope fa-3x"></i>
           <h6> Email </h6>
         </a>
-
       </div>
-
-      <form id="response-form" action="" method="POST">
+      <form id="response-form" action="Main.php" method="POST">
         <h1> Have A question? </h1>
         <p> Let me know </p>
         <hr style="background:white">
         <label for="fullName"> Full Name: </label>
-        <input type="text" name="fullName" id="fullName" placeholder="John Doe" required> </input>
+        <input type="text" name="fullName" id="fullName" placeholder="John Doe" required />
         <label for="email"> Email: </label>
-        <input type="email" name="email" id="email" placeholder="johndoe@example.com" required> </input>
+        <input type="email" name="email" id="email" placeholder="johndoe@example.com" required />
         <label for="tel"> Phone Number: </label>
-        <input type="tel" name="tel" id="tel" placeholder="xxx-xxx-xxxx"> </input>
+        <input type="tel" name="tel" id="tel" placeholder="xxx-xxx-xxxx" />
         <label for="comment"> Comment: </label>
         <textarea id="comment-area" name="comment" required> </textarea>
         <br />
-        <button type="submit" id="send-btn"> Send </button>
+        <button type="submit" id="send-btn" name="submit"> Send </button>
       </form>
-
     </section>
-
+      <script src="Main.js"></script>
   </body>
-
-  <!--
-  <?php
-    $name = htmlspecialchars($_POST["fullName"]);
-    echo $name;
-  ?>
-  -->
-  <script src="Main.js"></script>
   </html>
