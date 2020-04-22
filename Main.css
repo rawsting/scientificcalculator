@@ -187,6 +187,28 @@ i {
   width: 30%;
 }
 
+/* Why didnt last-child work? */
+#certCard {
+  margin-top: 5vh;
+  max-width: 100%;
+}
+
+#gcert-ctnr {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.certGroup {
+  border: 1px solid green;
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
 #toProj {
   grid-area: toProj;
   display: flex;
