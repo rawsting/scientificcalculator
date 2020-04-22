@@ -180,6 +180,7 @@ i {
   flex-wrap: wrap;
   justify-content: space-around;
   font-size: 17px;
+  max-width: 100%;
 }
 
 #card-ctnr .card {
