@@ -209,6 +209,20 @@ i {
   margin: 10px;
 }
 
+/* EXP */
+#slideshow-ctnr {
+  width: 80vw;
+  height: 60vh;
+  border: 1px solid black;
+  align-self: center;
+}
+
+.ss-obj {
+  width: 100%;
+  height: 100%;
+  background: red;
+}
+
 #toProj {
   grid-area: toProj;
   display: flex;

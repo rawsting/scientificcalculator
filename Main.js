@@ -47,3 +47,18 @@ function pfpHover() {
 function pfpUnHover() {
   $("#personal-thumbnail").attr("src", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/1438993/PFPHoco.jpg")
 };
+
+// EXP
+var slideItems = $("#slideshow-ctnr").children();
+function slide_Start() {
+  // init slideshow and hide all but first element
+  for (let i = 1; i < slideItems.length;i++) {
+    slideItems.eq(i).css("display", "none");
+  };
+};
+
+function nextSlide() {
+  
+};
+
+window.onload = slide_Start();
