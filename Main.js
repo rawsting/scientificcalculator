@@ -59,9 +59,11 @@ function slide_Start() {
   };
 };
 
+// when running if/else and calc index, used class arg and numerical exp so didnt calc btns, purely for clarity as btns are not a ssElem
+
 function nextSlide() {
   let currentSlide = slideCtnr.children(".ss-obj:visible");
-  if (currentSlide.index() < slideLength) {
+  if (currentSlide.index(".ss-obj")+1 < slideLength) {
     currentSlide.next().show();
     currentSlide.hide();
   }
@@ -70,5 +72,17 @@ function nextSlide() {
     currentSlide.hide();
   };
 };
+
+function lastSlide() {
+  let currentSlide = slideCtnr.children(".ss-obj:visible");
+  if (currentSlide.index(".ss-obj") > 0) {
+    currentSlide.prev().show();
+    currentSlide.hide();
+  }
+  else {
+    slideItems.last().show();
+    currentSlide.hide();
+  };
+}
 
 window.onload = slide_Start();
