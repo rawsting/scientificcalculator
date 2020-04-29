@@ -49,7 +49,9 @@ function pfpUnHover() {
 };
 
 // EXP
-var slideItems = $("#slideshow-ctnr").children();
+var slideCtnr = $("#slideshow-ctnr");
+var slideItems = $("#slideshow-ctnr").children(".ss-obj");
+var slideLength = slideCtnr.children(".ss-obj").length;
 function slide_Start() {
   // init slideshow and hide all but first element
   for (let i = 1; i < slideItems.length;i++) {
@@ -58,7 +60,15 @@ function slide_Start() {
 };
 
 function nextSlide() {
-  
+  let currentSlide = slideCtnr.children(".ss-obj:visible");
+  if (currentSlide.index() < slideLength) {
+    currentSlide.next().show();
+    currentSlide.hide();
+  }
+  else {
+    slideItems.first().show();
+    currentSlide.hide();
+  };
 };
 
 window.onload = slide_Start();

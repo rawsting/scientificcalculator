@@ -223,6 +223,12 @@ i {
   background: red;
 }
 
+.slideBtn {
+  position: absolute;
+}
+
+/* ------------ */
+
 #toProj {
   grid-area: toProj;
   display: flex;
