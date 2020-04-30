@@ -144,7 +144,6 @@
       </div>
 
       <div id="slideshow-ctnr">
-        <button class="slideBtn" onclick="lastSlide();"> Back </button>
         <div class="ss-obj">
           <h1>Obj 1</h1>
         </div>
@@ -154,7 +153,11 @@
         <div class="ss-obj">
           <h1>Obj 3</h1>
         </div>
-        <button class="slideBtn" onclick="nextSlide();"> Next </button>
+        <div id="slideBtn-ctnr">
+          <button class="slideBtn" onclick="lastSlide();"> Back </button>
+          <button class="slideBtn" onclick="nextSlide();"> Next </button>
+        </div>
+        <div id="slidePos"><p id="currentSlide"></p><p>/</p><p id="slideAmount"></p></div>
       </div>
 
         <br/>
