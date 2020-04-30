@@ -202,13 +202,20 @@ i {
 }
 
 .certGroup {
-  border: 1px solid green;
   display: flex;
   max-width: 100%;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   margin: 10px;
+  text-decoration: none;
+  color: #343A40;
+  text-align: center;
+}
+
+.certGroup:hover {
+  text-decoration: none;
+  color: #343A40;
 }
 
 #toProj {
