@@ -3,6 +3,8 @@
   padding: 0;
   scroll-behavior: smooth;
   max-width:100%;
+  margin-bottom: 0;
+  border-radius: 0;
 }
 
 img {
@@ -209,51 +211,6 @@ i {
   margin: 10px;
 }
 
-/* EXP */
-#slideshow-ctnr {
-  width: 80vw;
-  height: 60vh;
-  border: 1px solid black;
-  align-self: center;
-  position: relative;
-  text-align: center;
-  border: 1px solid white;
-}
-
-#slideBtn-ctnr {
-  display: flex;
-  position: absolute;
-  justify-content: space-between;
-  width: 100%;
-  bottom: 50%;
-  transform: translateY(-50%);
-}
-
-#slidePos {
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white
-}
-
-#slidePos p {
-  margin:0;
-}
-
-.ss-obj {
-  width: 100%;
-  height: 100%;
-  background: red;
-}
-
-.slideBtn {
-
-}
-
-/* ------------ */
-
 #toProj {
   grid-area: toProj;
   display: flex;
@@ -294,27 +251,91 @@ i {
   text-align: center;
   background: linear-gradient(#2c3e50, #0b72bd);
   color: white;
-  margin: 0px;  /*why was there a margin before added this? */
+  margin: 0;
 }
 
 #proj-g-ctnr {
   display: flex;
+  /* No longer needed with slide
   flex-direction: row;
   flex-wrap: wrap;
+  */
   align-items: center;
   justify-content: center;
 }
 
-.project-tile {
-  display: inline-block;
-  width: 30%;
-  margin: 1%;
+#slideshow-ctnr {
+  display: flex;
+  width: 60vw;
+  height: 40vw;
+  border: 1px solid black;
+  align-self: center;
+  position: relative;
   text-align: center;
   border: 3px solid #34495e;
+  border-radius: .5rem;
+}
+
+#slideBtn-ctnr {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  width: 100%;
+  bottom: 50%;
+  transform: translateY(-50%);
+}
+
+.slideBtn {
+  padding: 5px;
+  transition: .3s;
+}
+
+.slideBtn:hover {
+  background-color: rgba(0,0,0,0.4);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#slidePos {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: grey;
+}
+
+#slidePos p {
+  margin:0;
+}
+
+.ss-obj {
+  width: 100%;
+  display: flex;
+}
+
+.project-tile {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
   background: white;
 }
 
-#full-proj {
+#moreProjSlide {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: white;
+  border-radius: .25rem;
+}
+
+/* Proj Button*/
+
+.full-proj {
   display: inline-block;
   height: 5vh;
   text-align: center;
@@ -322,24 +343,25 @@ i {
   background: white;
   color: black;
   border: none;
-  padding: 5px;
+  padding: 5px 7px 5px 5px;
+  margin: 10px;
   border-radius: 16px;
   transition: 0.5s;
 }
 
-#full-proj i {
+.full-proj i {
   animation: leftToRight 1.5s linear infinite paused;
   transition: 0.3s;
 }
 
-#full-proj:hover {
+.full-proj:hover {
   color: white;
   background: #3399ff;
   cursor: pointer;
   transition: 0.5s;
 }
 
-#full-proj:hover i {
+.full-proj:hover i {
   color: white;
   margin-left: 5px;
   animation-play-state: running;
@@ -501,7 +523,7 @@ i {
     transform: translateX(0px);
   }
   50% {
-    transform: translateX(5px);
+    transform: translateX(4px);
   }
   100% {
     transform: translateX(0px);
